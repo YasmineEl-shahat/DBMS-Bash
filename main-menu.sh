@@ -9,28 +9,28 @@
 
               "Create DataBase")
 
-                              source ~/ITI/12-shell scripts/DBMS-Bash/create_DataBase.sh;;
+                              source ./create_DataBase.sh;;
 
               "Drop DataBase")
 
-                              source ~/ITI/12-shell scripts/DBMS-Bash/drop_DataBase.sh;;
+                              source ./drop_DataBase.sh;;
 
 
               "connect DataBase")
 
-                              source ~/ITI/12-shell scripts/DBMS-Bash/connect_DataBase.sh;;
+                              source ./connect_DataBase.sh;;
 
                "list DataBases")
 
-                              source ~/ITI/12-shell scripts/DBMS-Bash/list_DataBases.sh;;
+                              source ./list_DataBases.sh;;
 
                "Create Table")
 
-                               source ~/ITI/12-shell scripts/DBMS-Bash/create_Table.sh;;
+                               source ./create_Table.sh;;
 
                "update Table" )
 
-                              source ~/ITI/12-shell scripts/DBMS-Bash/update_Table.sh;;
+                              source ./update_Table.sh;;
 	      "Exit" )
 
                               exit ;;
