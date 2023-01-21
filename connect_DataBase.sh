@@ -9,15 +9,15 @@ connect_dataBase(){
 
                "Create Table")
 
-                              source ./create_Table.sh  $dataBase_name;;
+                              source ~/DBMS-Bash/create_Table.sh  $dataBase_name;;
 
                "Delete Table")
 
-                              source ./delete_Table.sh;;
+                              source ~/DBMS-Bash/delete_Table.sh;;
 
               "update Table")
 
-                              source ./update_Table.sh;;
+                              source ~/DBMS-Bash/update_Table.sh;;
 
                               * )
                               printf "\nPlease choose a correct option\n"
@@ -29,12 +29,12 @@ connect_dataBase(){
 
 
     #list all dataBases if exist
-    sourse ./list_DataBases.sh
+    sourse ~/DBMS-Bash/list_DataBases.sh
 
     printf "\nEnter dataBase_name ?\n"
     read dataBase_name
     printf "\n"
-    cd Databases
+    cd ~/DBMS-Bash/Databases
     if [ -d "$dataBase_name" ]
     then
         connect_dataBase
@@ -43,6 +43,6 @@ connect_dataBase(){
 
         printf  "back to menu\n"
 
-        source ../main-menu.sh
+        source ~/DBMS-Bash/main-menu.sh
 
     fi

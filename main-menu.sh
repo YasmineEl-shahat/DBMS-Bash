@@ -9,28 +9,28 @@
 
               "Create DataBase")
 
-                              source ./create_DataBase.sh;;
+                              source ~/DBMS-Bash/create_DataBase.sh;;
 
               "Drop DataBase")
 
-                              source ./drop_DataBase.sh;;
+                              source ~/DBMS-Bash/drop_DataBase.sh;;
 
 
               "connect DataBase")
 
-                              source ./connect_DataBase.sh;;
+                              source ~/DBMS-Bash/connect_DataBase.sh;;
 
                "list DataBases")
 
-                              source ./list_DataBases.sh;;
+                              source ~/DBMS-Bash/list_DataBases.sh;;
 
                "Create Table")
 
-                               source ./create_Table.sh;;
+                               source ~/DBMS-Bash/create_Table.sh;;
 
                "update Table" )
 
-                              source ./update_Table.sh;;
+                              source ~/DBMS-Bash/update_Table.sh;;
 	      "Exit" )
 
                               exit ;;
