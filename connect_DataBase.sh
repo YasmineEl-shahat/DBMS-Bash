@@ -1,34 +1,5 @@
 #!/bin/bash
 
-connect_dataBase(){
-
-	cd $dataBase_name
-        select choise in "Create Table" "Delete Table" "update Table"
-          do
-
-          case $choise in
-
-               "Create Table")
-
-                              source ~/DBMS-Bash/create_Table.sh  $dataBase_name;;
-
-               "Delete Table")
-
-                              source ~/DBMS-Bash/delete_Table.sh;;
-
-              "update Table")
-
-                              source ~/DBMS-Bash/update_Table.sh;;
-
-                              * )
-                              printf "\nPlease choose a correct option\n"
-          esac
-
-          done
-
-}
-
-
     #list all dataBases if exist
     sourse ~/DBMS-Bash/list_DataBases.sh
 
@@ -38,7 +9,7 @@ connect_dataBase(){
     cd ~/DBMS-Bash/Databases
     if [ -d "$dataBase_name" ]
     then
-        connect_dataBase
+          source ~/DBMS-Bash/table-menu.sh $dataBase_name
     else
         printf "\nThis dataBase doesn't exist\n"
 
@@ -47,3 +18,4 @@ connect_dataBase(){
         source ~/DBMS-Bash/main-menu.sh
 
     fi
+
