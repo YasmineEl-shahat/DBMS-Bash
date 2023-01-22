@@ -2,7 +2,8 @@
 
 connect_dataBase(){
 
-        select choise in "Create Table" "Delete Table" "modify on Table"
+	cd $dataBase_name
+        select choise in "Create Table" "Delete Table" "update Table"
           do
 
           case $choise in
