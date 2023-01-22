@@ -2,7 +2,7 @@
 
 connect_dataBase(){
 
-        select choise in "Create Table" "Delete Table" "modify on Table"
+        select choise in "Create Table" "Delete Table" "update Table"
           do
 
           case $choise in
@@ -13,7 +13,7 @@ connect_dataBase(){
 
                "Delete Table")
 
-                              source ~/DBMS-Bash/delete_Table.sh;;
+                              source ~/DBMS-Bash/drop_table.sh;;
 
               "update Table")
 

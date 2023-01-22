@@ -1,7 +1,7 @@
 #!/bin/bash
 
 create_dataBase(){
-     mkdir "$dataBase_name"
+     mkdir ~/DBMS-Bash/Databases/$dataBase_name
      printf "\n dataBase created successfully\n"
 }
 printf "\nEnter the name of dataBase ?\n"
