@@ -17,7 +17,7 @@ then
      
     # printf "\nGo back to the main menu to select another option\n"
  
-     source ~/DBMS-Bash/main-menu.sh
+     #source ~/DBMS-Bash/main-menu.sh
 
 else
 

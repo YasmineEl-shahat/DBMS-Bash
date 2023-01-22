@@ -1,7 +1,7 @@
 #!/bin/bash
 
     #list all dataBases if exist
-    sourse ~/DBMS-Bash/list_DataBases.sh
+    source ~/DBMS-Bash/list_databases.sh
 
     printf "\nEnter dataBase_name ?\n"
     read dataBase_name
