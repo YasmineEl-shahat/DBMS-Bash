@@ -79,14 +79,15 @@
      }
 
      #Calling getPrimaryKey function
+     echo ${columns_arr[@]} >> $table_name
      getPrimaryKey
 
-     echo " " >> $table_name 
-     echo "Your table columns are" >> $table_name 
-     echo ${columns_arr[@]} >> $table_name 
-     echo "The data types of each column " >> $table_name
+     #echo " " >> $table_name 
+     #echo "Your table columns are" >> $table_name 
+     #echo ${columns_arr[@]} >> $table_name 
+     #echo "The data types of each column " >> $table_name
      echo ${dataType_arr[@]} >> $table_name 
-     echo "Note : (1) => int ,, (2) => varchar " >> $table_name 
+     #echo "Note : (1) => int ,, (2) => varchar " >> $table_name 
      printf "\nYour table has been created successfully\n\n"
 }
 

@@ -1,3 +1,5 @@
 #!/bin/bash
-ls ~/DBMS-Bash/Databases/$1
-
+for i in $(ls ~/DBMS-Bash/Databases/$1);
+do
+   echo ${i};
+done

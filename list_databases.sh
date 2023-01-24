@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#Check if the DataBase Engin is initialized
 
 if [ -d Databases ]
 then

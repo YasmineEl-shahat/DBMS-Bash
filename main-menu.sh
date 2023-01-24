@@ -13,7 +13,7 @@
 
               "Drop DataBase")
 
-                              source ~/DBMS-Bash/drop_DataBase.sh;;
+                              source ~/DBMS-Bash/drop_database.sh;;
 
 
               "connect DataBase")
@@ -22,7 +22,7 @@
 
                "list DataBases")
 
-                              source ~/DBMS-Bash/list_DataBases.sh;;
+                              source ~/DBMS-Bash/list_databases.sh;;
 
                "Create Table")
 
