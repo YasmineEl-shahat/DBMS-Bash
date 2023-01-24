@@ -3,7 +3,7 @@
 tableMenu(){
 
         cd $dataBase_name
-        select choise in "list tables" "Create Table" "Delete Table" "update Table" "insert into Table"
+        select choise in "list tables" "Create Table" "Delete Table" "update Table" "insert into Table" "delete record"
           do
 
           case $choise in
@@ -16,15 +16,19 @@ tableMenu(){
 
                "Delete Table")
 
-                              source ~/DBMS-Bash/delete_Table.sh;;
+                              source ~/DBMS-Bash/drop_table.sh $dataBase_name;;
 
               "update Table")
 
-                              source ~/DBMS-Bash/update_Table.sh;;
+                              source ~/DBMS-Bash/update-record.sh $dataBase_name;;
 	
               "insert into Table")
 
                               source ~/DBMS-Bash/insert-into-table.sh  $dataBase_name;;
+	      "delete record")
+
+                              source ~/DBMS-Bash/delete-record.sh  $dataBase_name;;
+
 
 
                               * )

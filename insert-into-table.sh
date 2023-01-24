@@ -9,7 +9,6 @@ source ~/DBMS-Bash/get-table-data.sh  ~/DBMS-Bash/Databases/$1/$table_name
 echo "Columns and records of table :" 
 echo ${arr_Of_Columns[@]}
 echo " "
-
 insertRecord()
 {
 
