@@ -30,6 +30,9 @@ tableMenu(){
                               source ~/DBMS-Bash/delete-record.sh  $dataBase_name;;
 
 
+	      "select from recore")
+
+                              source ~/DBMS-Bash/selectRecord.sh;;
 
                               * )
                               printf "\nPlease choose a correct option\n"
