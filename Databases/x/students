@@ -1,9 +1,8 @@
-id name age
 The index of Your primary key column is:
-1
+0
+ 
 Your table columns are
+id name age
 The data types of each column 
 1 2 1
 Note : (1) => int ,, (2) => varchar 
-d g v
-6 gg 5
