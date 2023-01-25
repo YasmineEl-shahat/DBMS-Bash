@@ -5,16 +5,14 @@ ls ~/DBMS-Bash/Databases/$1
 
 read -p "Enter table Name: " table_name
 
-echo "Columns and records of table :"
-echo ${arr_Of_Columns[@]}
-echo " "
-
 
 
 if [ ! -f ~/DBMS-Bash/Databases/$1/$table_name ]
 then
 	echo "table does not exist"
 fi
+ awk -F: 'BEGIN{FS=" "}{if(NR==1){print $0}}' ~/DBMS-Bash/Databases/$1/$table_name;
+
 read -p "Enter column to update record from  : " colName
 columnNumber=`awk -v RS=" " "/$colName/{print NR; exit}"   ~/DBMS-Bash/Databases/$1/$table_name`
 if [ -z $columnNumber ]
@@ -23,23 +21,16 @@ then
 fi
 read -p "Enter value  to update  : " value;
 
-searchforvalue=`cut -d " " -f $columnNumber ~/DBMS-Bash/Databases/$1/$table_name 2>/dev/null|awk "/$value/{print NR}" `
-echo $searchforvalue
+searchforvalue=$(cut -d " " -f $columnNumber ~/DBMS-Bash/Databases/$1/$table_name | grep -xn $value | cut -d: -f 1)
+#echo $searchforvalue
 if [ -z $searchforvalue ]
 then
 	echo "value doesnt exist"
 fi
-read -p "enter update column:" colUpdate
+read -p "enter new value : " newValue
+sed -i ''$searchforvalue's/'$value'/'$newValue'/g' ~/DBMS-Bash/Databases/$1/$table_name 2>/dev/null
+echo "table updated successfully"
+ source ~/DBMS-Bash/table-menu.sh
 
-updateNum=`awk -v RS=" " "/$colUpdate/{print NR}" ~/DBMS-Bash/Databases/$1/$table_name`
-if [ -z $updateNum ]
-then
-	echo "colum does not exist"
-fi
-oldValue=$(awk 'BEGIN{FS=" "} {
-if(NR=="'searchforvalue'"){
-	print $'$updateNum';
-}}'  ~/DBMS-Bash/Databases/$1/$table_name )
-sed -i '$$searchforvalue's/'$oldValue'/'
 
 
