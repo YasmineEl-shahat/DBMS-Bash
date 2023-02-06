@@ -14,4 +14,6 @@ then
     printf "\ndataBase already exists\n"
 else
     create_dataBase
+    source ~/DBMS-Bash/main-menu.sh
+
 fi

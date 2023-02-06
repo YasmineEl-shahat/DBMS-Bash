@@ -5,10 +5,10 @@
 
 #Check if the DataBase Engin is initialized
 
-if [ -d Databases ]
+if [ -d ~/DBMS-Bash/Databases ]
 then
 
-     cd Databases
+     cd ~/DBMS-Bash/Databases
 
 
     arr_dataBases=($(ls))
@@ -35,7 +35,11 @@ then
         
             rm -r "$dataBase_name"
 
-            printf "\nYour DataBase is deleted\n"
+            printf "\nYour DataBase has deleted\n"
+	    printf  "Go back to menu\n"
+
+             source ~/DBMS-Bash/main-menu.sh
+
 
         else
             

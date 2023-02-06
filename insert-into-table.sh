@@ -4,6 +4,13 @@ ls ~/DBMS-Bash/Databases/$1
 
 read -p "Enter table Name: " table_name
 
+if [ ! -f ~/DBMS-Bash/Databases/$1/$table_name ]
+then
+        echo "table does not exist"
+	source ~/DBMS-Bash/table-menu.sh
+
+else
+
 source ~/DBMS-Bash/get-table-data.sh  ~/DBMS-Bash/Databases/$1/$table_name
 
 echo "Columns and records of table :" 
@@ -107,3 +114,7 @@ insertRecord
 
 echo  "${values_Of_new_record[@]}" >> $table_name
 printf "\nNew record is added successfully\n"
+            printf  "Go back to menu\n"
+
+             source ~/DBMS-Bash/table-menu.sh
+     fi

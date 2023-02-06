@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-if [ -d Databases ]
+if [ -d ~/DBMS-Bash/Databases ]
 then
    
-     cd Databases
+     cd ~/DBMS-Bash/Databases
      printf "\nAll DataBases are : \n"
 
      #List all Databases
