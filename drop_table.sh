@@ -25,6 +25,7 @@
             rm -r "$table_name"
 
             printf "\nYour table is deleted\n"
+	      source ~/DBMS-Bash/table-menu.sh
 
 	     else
 
@@ -32,20 +33,24 @@
 
             printf  "Go back to menu\n"
 
-           # source path to the options
+             source ~/DBMS-Bash/table-menu.sh
+
 
         fi
 
     else
 
         printf "\nThis DataBase  is empty ,, please create table first"
-        #source path to the options
+         printf  "Go back to menu\n"
+
+         source ~/DBMS-Bash/table-menu.sh
+
 
     fi
 
 
     
-                                                            59,1          Bot
+                                                           
 
 
 

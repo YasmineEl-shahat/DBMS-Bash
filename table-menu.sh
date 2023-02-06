@@ -2,8 +2,8 @@
 
 tableMenu(){
 
-        cd $dataBase_name
-        select choise in "list tables" "Create Table" "Delete Table" "update Table" "insert into Table" "delete record"
+        cd ~/DBMS-Bash/Databases/$dataBase_name
+        select choise in "list tables" "Create Table" "Delete Table" "update Table" "insert into Table" "delete record" "select from record"
           do
 
           case $choise in
@@ -30,9 +30,9 @@ tableMenu(){
                               source ~/DBMS-Bash/delete-record.sh  $dataBase_name;;
 
 
-	      "select from recore")
+	      "select from record")
 
-                              source ~/DBMS-Bash/selectRecord.sh;;
+                              source ~/DBMS-Bash/select_Record.sh;;
 
                               * )
                               printf "\nPlease choose a correct option\n"

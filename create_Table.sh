@@ -103,6 +103,8 @@ then
         	 printf "\nThis table_name already exists"
       	else
         	 create_table
+		 source ~/DBMS-Bash/table-menu.sh
+
       	fi
 else
         printf "\ntable name must be string only \n"
